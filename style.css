@@ -1,84 +1,150 @@
-/* ===== GARIS CAHAYA ATAS ===== */
-.mobile-before-layout__container .btn--info::before,
-.mobile-before-layout__container .btn--danger::before,
-.mobile-before-layout__container .btn--success::before {
-    content: "" !important;
-    position: absolute !important;
-    top: 3px !important;
-    left: 10px !important;
-    right: 10px !important;
-    height: 38% !important;
-    border-radius: 999px !important;
+```css
+/* ===== MOBILE BUTTON CLEAN GLOSSY - AMAN TIDAK NAIK KE BANNER ===== */
+.mobile-before-layout__container .btn--info,
+.mobile-before-layout__container .btn--danger,
+.mobile-before-layout__container .btn--success {
+    position: relative !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
 
+    border: none !important;
+    border-radius: 8px !important;
+    clip-path: none !important;
+
+    min-height: 38px !important;
+    margin-bottom: 8px !important;
+
+    font-weight: 800 !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+
+    box-shadow: none !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.65) !important;
+}
+
+/* LOGIN - BIRU */
+.mobile-before-layout__container .btn--info {
     background:
         linear-gradient(
             180deg,
-            rgba(255, 255, 255, 0.72) 0%,
-            rgba(255, 255, 255, 0.34) 45%,
-            rgba(255, 255, 255, 0.04) 100%
+            #68f1ff 0%,
+            #1db8f2 35%,
+            #0874ce 68%,
+            #063f91 100%
         ) !important;
-
-    pointer-events: none !important;
-    z-index: 2 !important;
+    background-color: #0874ce !important;
+    color: #ffffff !important;
+    border: 1px solid #77efff !important;
 }
 
-/* ===== EFEK KILAU JALAN ===== */
-.mobile-before-layout__container .btn--info::after,
-.mobile-before-layout__container .btn--danger::after,
-.mobile-before-layout__container .btn--success::after {
-    content: "" !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: -80% !important;
-    width: 45% !important;
-    height: 100% !important;
-
+/* DAFTAR - BIRU TUA PREMIUM */
+.mobile-before-layout__container .btn--danger {
     background:
         linear-gradient(
-            120deg,
-            transparent 0%,
-            rgba(255,255,255,0.12) 30%,
-            rgba(255,255,255,0.75) 50%,
-            rgba(255,255,255,0.18) 70%,
-            transparent 100%
+            180deg,
+            #42dfff 0%,
+            #1398d8 35%,
+            #075aa8 68%,
+            #052f70 100%
         ) !important;
-
-    transform: skewX(-24deg) !important;
-    animation: glossy-mobile-button 2.6s ease-in-out infinite !important;
-    pointer-events: none !important;
-    z-index: 3 !important;
+    background-color: #075aa8 !important;
+    color: #ffffff !important;
+    border: 1px solid #52eaff !important;
 }
 
-/* text biar tetap di atas background tapi kilau masih kelihatan */
+/* PROMOSI - NAVY CYAN */
+.mobile-before-layout__container .btn--success {
+    background:
+        linear-gradient(
+            180deg,
+            #35cfff 0%,
+            #0b82c8 35%,
+            #064b96 68%,
+            #03265c 100%
+        ) !important;
+    background-color: #064b96 !important;
+    color: #ffffff !important;
+    border: 1px solid #42dfff !important;
+}
+
+/* INNER BUTTON JANGAN PUNYA BACKGROUND SENDIRI */
 .mobile-before-layout__container .btn--info .btn__inner,
 .mobile-before-layout__container .btn--info .btn__inner--info,
 .mobile-before-layout__container .btn--danger .btn__inner,
 .mobile-before-layout__container .btn--danger .btn__inner--danger,
 .mobile-before-layout__container .btn--success .btn__inner,
 .mobile-before-layout__container .btn--success .btn__inner--success {
+    position: relative !important;
+    z-index: 3 !important;
+
     background: transparent !important;
     background-color: transparent !important;
-    color: inherit !important;
-    position: relative !important;
-    z-index: 4 !important;
+    color: #ffffff !important;
+
+    box-shadow: none !important;
+    text-shadow: inherit !important;
 }
 
+/* GLOSSY ATAS - DIAM, TIDAK KELUAR TOMBOL */
+.mobile-before-layout__container .btn--info::before,
+.mobile-before-layout__container .btn--danger::before,
+.mobile-before-layout__container .btn--success::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 2px !important;
+    left: 6px !important;
+    right: 6px !important;
+    height: 42% !important;
+
+    border-radius: 6px !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,0.55) 0%,
+            rgba(255,255,255,0.18) 55%,
+            rgba(255,255,255,0.02) 100%
+        ) !important;
+
+    pointer-events: none !important;
+    z-index: 1 !important;
+}
+
+/* GARIS GELAP BAWAH BIAR KELIHATAN TEBAL */
+.mobile-before-layout__container .btn--info::after,
+.mobile-before-layout__container .btn--danger::after,
+.mobile-before-layout__container .btn--success::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    height: 32% !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 0%,
+            rgba(0,0,0,0.22) 100%
+        ) !important;
+
+    pointer-events: none !important;
+    z-index: 1 !important;
+}
+
+/* HAPUS ANIMASI LAMA BIAR GA NAIK KE BANNER */
 @keyframes glossy-mobile-button {
-    0% {
-        left: -80%;
-        opacity: 0;
-    }
-
-    20% {
-        opacity: 1;
-    }
-
-    55% {
-        opacity: 0.95;
-    }
-
-    100% {
-        left: 130%;
-        opacity: 0;
-    }
+    from { opacity: 0; }
+    to { opacity: 0; }
 }
+
+@keyframes cyber-scan {
+    from { opacity: 0; }
+    to { opacity: 0; }
+}
+
+@keyframes cyber-pulse {
+    from { opacity: 1; }
+    to { opacity: 1; }
+}
+```
