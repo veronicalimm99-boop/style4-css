@@ -1,4 +1,4 @@
-/* ===== MOBILE BUTTON PREMIUM GLOSSY - CLEAN & AMAN ===== */
+/* ===== MOBILE BUTTON CLEAN GLOSSY - AMAN TIDAK NAIK KE BANNER ===== */
 .mobile-before-layout__container .btn--info,
 .mobile-before-layout__container .btn--danger,
 .mobile-before-layout__container .btn--success {
@@ -10,7 +10,7 @@
     border-radius: 8px !important;
     clip-path: none !important;
 
-    min-height: 40px !important;
+    min-height: 38px !important;
     margin-bottom: 8px !important;
 
     font-weight: 800 !important;
@@ -18,63 +18,55 @@
     text-transform: uppercase !important;
 
     box-shadow: none !important;
-    text-shadow:
-        0 1px 2px rgba(0,0,0,0.75),
-        0 0 6px rgba(255,255,255,0.28) !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.65) !important;
 }
 
-/* ===== LOGIN - BIRU LEBIH KILAU ===== */
+/* LOGIN - BIRU */
 .mobile-before-layout__container .btn--info {
     background:
         linear-gradient(
             180deg,
-            #b8fbff 0%,
-            #54efff 16%,
-            #18baf5 42%,
-            #0873d6 72%,
-            #043b92 100%
+            #68f1ff 0%,
+            #1db8f2 35%,
+            #0874ce 68%,
+            #063f91 100%
         ) !important;
-    background-color: #0873d6 !important;
-
+    background-color: #0874ce !important;
     color: #ffffff !important;
-    border: 1px solid #b9fbff !important;
+    border: 1px solid #77efff !important;
 }
 
-/* ===== DAFTAR - BIRU CYAN PREMIUM ===== */
+/* DAFTAR - BIRU TUA PREMIUM */
 .mobile-before-layout__container .btn--danger {
     background:
         linear-gradient(
             180deg,
-            #8ff6ff 0%,
-            #30d7ff 18%,
-            #1199dc 45%,
-            #075ca8 72%,
-            #053070 100%
+            #42dfff 0%,
+            #1398d8 35%,
+            #075aa8 68%,
+            #052f70 100%
         ) !important;
-    background-color: #075ca8 !important;
-
+    background-color: #075aa8 !important;
     color: #ffffff !important;
-    border: 1px solid #7cefff !important;
+    border: 1px solid #52eaff !important;
 }
 
-/* ===== PROMOSI - NAVY CYAN PREMIUM ===== */
+/* PROMOSI - NAVY CYAN */
 .mobile-before-layout__container .btn--success {
     background:
         linear-gradient(
             180deg,
-            #72eaff 0%,
-            #21bfe9 18%,
-            #0b82c8 45%,
-            #064b96 72%,
+            #35cfff 0%,
+            #0b82c8 35%,
+            #064b96 68%,
             #03265c 100%
         ) !important;
     background-color: #064b96 !important;
-
     color: #ffffff !important;
-    border: 1px solid #5ee6ff !important;
+    border: 1px solid #42dfff !important;
 }
 
-/* ===== INNER BUTTON JANGAN PUNYA BACKGROUND SENDIRI ===== */
+/* INNER BUTTON JANGAN PUNYA BACKGROUND SENDIRI */
 .mobile-before-layout__container .btn--info .btn__inner,
 .mobile-before-layout__container .btn--info .btn__inner--info,
 .mobile-before-layout__container .btn--danger .btn__inner,
@@ -82,105 +74,64 @@
 .mobile-before-layout__container .btn--success .btn__inner,
 .mobile-before-layout__container .btn--success .btn__inner--success {
     position: relative !important;
-    z-index: 5 !important;
+    z-index: 3 !important;
 
     background: transparent !important;
     background-color: transparent !important;
     color: #ffffff !important;
 
     box-shadow: none !important;
-    text-shadow:
-        0 1px 2px rgba(0,0,0,0.78),
-        0 0 8px rgba(255,255,255,0.42) !important;
+    text-shadow: inherit !important;
 }
 
-/* ===== GLOSSY PUTIH ATAS - DIAM, TIDAK KELUAR TOMBOL ===== */
+/* GLOSSY ATAS - DIAM, TIDAK KELUAR TOMBOL */
 .mobile-before-layout__container .btn--info::before,
 .mobile-before-layout__container .btn--danger::before,
 .mobile-before-layout__container .btn--success::before {
     content: "" !important;
     position: absolute !important;
     top: 2px !important;
-    left: 7px !important;
-    right: 7px !important;
-    height: 48% !important;
+    left: 6px !important;
+    right: 6px !important;
+    height: 42% !important;
 
-    border-radius: 7px !important;
+    border-radius: 6px !important;
 
     background:
         linear-gradient(
             180deg,
-            rgba(255,255,255,0.82) 0%,
-            rgba(255,255,255,0.40) 45%,
-            rgba(255,255,255,0.06) 100%
+            rgba(255,255,255,0.55) 0%,
+            rgba(255,255,255,0.18) 55%,
+            rgba(255,255,255,0.02) 100%
         ) !important;
 
     pointer-events: none !important;
     z-index: 1 !important;
 }
 
-/* ===== KILAU TIPIS TENGAH ===== */
+/* GARIS GELAP BAWAH BIAR KELIHATAN TEBAL */
 .mobile-before-layout__container .btn--info::after,
 .mobile-before-layout__container .btn--danger::after,
 .mobile-before-layout__container .btn--success::after {
     content: "" !important;
     position: absolute !important;
-    left: 8px !important;
-    right: 8px !important;
-    top: 46% !important;
-    height: 2px !important;
-
-    border-radius: 999px !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    height: 32% !important;
 
     background:
         linear-gradient(
-            90deg,
+            180deg,
             transparent 0%,
-            rgba(255,255,255,0.48) 20%,
-            rgba(255,255,255,0.70) 50%,
-            rgba(255,255,255,0.48) 80%,
-            transparent 100%
+            rgba(0,0,0,0.22) 100%
         ) !important;
 
     pointer-events: none !important;
-    z-index: 2 !important;
+    z-index: 1 !important;
 }
 
-/* ===== ACTIVE / KLIK ===== */
-.mobile-before-layout__container .btn--info:active {
-    background:
-        linear-gradient(
-            180deg,
-            #42eaff 0%,
-            #0c8fda 38%,
-            #075fc5 66%,
-            #041f5e 100%
-        ) !important;
-}
-
-.mobile-before-layout__container .btn--danger:active {
-    background:
-        linear-gradient(
-            180deg,
-            #35dfff 0%,
-            #0d92d0 38%,
-            #07539b 66%,
-            #03275e 100%
-        ) !important;
-}
-
-.mobile-before-layout__container .btn--success:active {
-    background:
-        linear-gradient(
-            180deg,
-            #30cfff 0%,
-            #0879bc 38%,
-            #053f82 66%,
-            #021d4a 100%
-        ) !important;
-}
-
-/* ===== MATIKAN ANIMASI LAMA BIAR TIDAK NAIK KE BANNER ===== */
+/* HAPUS ANIMASI LAMA BIAR GA NAIK KE BANNER */
 @keyframes glossy-mobile-button {
     from { opacity: 0; }
     to { opacity: 0; }
