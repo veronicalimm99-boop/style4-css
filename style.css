@@ -1,222 +1,84 @@
-/* ===== ANIMASI ===== */
-@keyframes cyber-pulse {
-    0%, 100% {
-        opacity: 0.45;
-    }
-    50% {
-        opacity: 1;
-    }
-}
-
-@keyframes cyber-scan {
-    0% {
-        opacity: 0.75;
-        transform: translateY(-8px);
-    }
-    50% {
-        opacity: 0.35;
-        transform: translateY(4px);
-    }
-    100% {
-        opacity: 0.75;
-        transform: translateY(-8px);
-    }
-}
-
-.mobile-before-layout__container .btn--info,
-.mobile-before-layout__container .btn--danger,
-.mobile-before-layout__container .btn--success {
-    position: relative !important;
-    border: none !important;
-    font-weight: 700 !important;
-    letter-spacing: 1.5px !important;
-    text-transform: uppercase !important;
-    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%) !important;
-    overflow: hidden !important;
-    will-change: contents !important;
-    border-radius: 0 !important;
-}
-
 /* ===== GARIS CAHAYA ATAS ===== */
 .mobile-before-layout__container .btn--info::before,
 .mobile-before-layout__container .btn--danger::before,
 .mobile-before-layout__container .btn--success::before {
-    content: '' !important;
+    content: "" !important;
     position: absolute !important;
-    top: 0 !important;
-    left: 12% !important;
-    right: 12% !important;
-    height: 2px !important;
-    border-radius: 0 0 2px 2px !important;
-    animation: cyber-pulse 2s infinite ease-in-out !important;
-    will-change: opacity !important;
+    top: 3px !important;
+    left: 10px !important;
+    right: 10px !important;
+    height: 38% !important;
+    border-radius: 999px !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.72) 0%,
+            rgba(255, 255, 255, 0.34) 45%,
+            rgba(255, 255, 255, 0.04) 100%
+        ) !important;
+
     pointer-events: none !important;
     z-index: 2 !important;
 }
 
-/* ===== EFEK GLOSSY ATAS ===== */
+/* ===== EFEK KILAU JALAN ===== */
 .mobile-before-layout__container .btn--info::after,
 .mobile-before-layout__container .btn--danger::after,
 .mobile-before-layout__container .btn--success::after {
-    content: '' !important;
+    content: "" !important;
     position: absolute !important;
-    left: 0 !important;
-    right: 0 !important;
     top: 0 !important;
-    height: 48% !important;
+    left: -80% !important;
+    width: 45% !important;
+    height: 100% !important;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent 0%,
+            rgba(255,255,255,0.12) 30%,
+            rgba(255,255,255,0.75) 50%,
+            rgba(255,255,255,0.18) 70%,
+            transparent 100%
+        ) !important;
+
+    transform: skewX(-24deg) !important;
+    animation: glossy-mobile-button 2.6s ease-in-out infinite !important;
     pointer-events: none !important;
-    animation: cyber-scan 2.8s infinite linear !important;
-    will-change: transform, opacity !important;
-    z-index: 1 !important;
+    z-index: 3 !important;
 }
 
-/* ===== LOGIN - BIRU ===== */
-.mobile-before-layout__container .btn--info {
-    background:
-        linear-gradient(
-            180deg,
-            #38eaff 0%,
-            #0d9ee8 36%,
-            #075fc5 70%,
-            #062c7a 100%
-        ) !important;
-    background-color: #075fc5 !important;
-
-    color: #ffffff !important;
-    box-shadow: none !important;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.75) !important;
-}
-
+/* text biar tetap di atas background tapi kilau masih kelihatan */
 .mobile-before-layout__container .btn--info .btn__inner,
-.mobile-before-layout__container .btn--info .btn__inner--info {
-    background: transparent !important;
-    background-color: transparent !important;
-    color: inherit !important;
-    position: relative !important;
-    z-index: 3 !important;
-}
-
-.mobile-before-layout__container .btn--info::before {
-    background: #9ff7ff !important;
-}
-
-.mobile-before-layout__container .btn--info::after {
-    background:
-        linear-gradient(
-            180deg,
-            rgba(255,255,255,0.42) 0%,
-            rgba(255,255,255,0.13) 52%,
-            transparent 100%
-        ) !important;
-}
-
-.mobile-before-layout__container .btn--info:active {
-    background:
-        linear-gradient(
-            180deg,
-            #0c8fda 0%,
-            #075fc5 55%,
-            #041f5e 100%
-        ) !important;
-}
-
-/* ===== DAFTAR - HIJAU CYAN ===== */
-.mobile-before-layout__container .btn--danger {
-    background:
-        linear-gradient(
-            180deg,
-            #51ffd0 0%,
-            #00c88a 36%,
-            #06805c 70%,
-            #034530 100%
-        ) !important;
-    background-color: #06805c !important;
-
-    color: #ffffff !important;
-    box-shadow: none !important;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.75) !important;
-}
-
+.mobile-before-layout__container .btn--info .btn__inner--info,
 .mobile-before-layout__container .btn--danger .btn__inner,
-.mobile-before-layout__container .btn--danger .btn__inner--danger {
-    background: transparent !important;
-    background-color: transparent !important;
-    color: inherit !important;
-    position: relative !important;
-    z-index: 3 !important;
-}
-
-.mobile-before-layout__container .btn--danger::before {
-    background: #b7ffe9 !important;
-}
-
-.mobile-before-layout__container .btn--danger::after {
-    background:
-        linear-gradient(
-            180deg,
-            rgba(255,255,255,0.42) 0%,
-            rgba(255,255,255,0.13) 52%,
-            transparent 100%
-        ) !important;
-}
-
-.mobile-before-layout__container .btn--danger:active {
-    background:
-        linear-gradient(
-            180deg,
-            #00b87d 0%,
-            #067252 55%,
-            #033826 100%
-        ) !important;
-}
-
-/* ===== PROMOSI - GOLD ===== */
-.mobile-before-layout__container .btn--success {
-    background:
-        linear-gradient(
-            180deg,
-            #ffe970 0%,
-            #f4b900 36%,
-            #b77a00 70%,
-            #5f3b00 100%
-        ) !important;
-    background-color: #b77a00 !important;
-
-    color: #ffffff !important;
-    box-shadow: none !important;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.78) !important;
-}
-
+.mobile-before-layout__container .btn--danger .btn__inner--danger,
 .mobile-before-layout__container .btn--success .btn__inner,
 .mobile-before-layout__container .btn--success .btn__inner--success {
     background: transparent !important;
     background-color: transparent !important;
     color: inherit !important;
     position: relative !important;
-    z-index: 3 !important;
+    z-index: 4 !important;
 }
 
-.mobile-before-layout__container .btn--success::before {
-    background: #fff3a3 !important;
-}
+@keyframes glossy-mobile-button {
+    0% {
+        left: -80%;
+        opacity: 0;
+    }
 
-.mobile-before-layout__container .btn--success::after {
-    background:
-        linear-gradient(
-            180deg,
-            rgba(255,255,255,0.42) 0%,
-            rgba(255,255,255,0.13) 52%,
-            transparent 100%
-        ) !important;
-}
+    20% {
+        opacity: 1;
+    }
 
-.mobile-before-layout__container .btn--success:active {
-    background:
-        linear-gradient(
-            180deg,
-            #e6a900 0%,
-            #9d6900 55%,
-            #4a2d00 100%
-        ) !important;
-}
+    55% {
+        opacity: 0.95;
+    }
 
+    100% {
+        left: 130%;
+        opacity: 0;
+    }
+}
